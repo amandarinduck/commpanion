@@ -10,18 +10,15 @@ for i in range(players):
     boxes.append(playerbox)
 
 
-if st.button("Life Totals"):
-    st.write(box for box in boxes)
-
-card = st.text_input("look up a card here")
+card = st.text_input("Look up a card by searching below")
 
 
 def get_card_by_name(name: str):
     card1 = scrython.cards.Named(fuzzy=name, rate_limit=False)
     st.write(card1.name)
-    st.write(card1.mana_cost)
+    # st.write(card1.mana_cost)
     st.write(card1.type_line)
-    st.write(card1.oracle_text)
+    # st.write(card1.oracle_text)
     st.image(card1.image_uris["normal"])
 
 
