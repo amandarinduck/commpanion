@@ -25,4 +25,5 @@ def get_card_by_name(name: str):
     st.image(card1.image_uris["normal"])
 
 
-get_card_by_name(card)
+if card.strip():
+    get_card_by_name(card)
